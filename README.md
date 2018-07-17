@@ -1,0 +1,1 @@
+# spiritrustlutheran-custom-theme
