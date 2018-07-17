@@ -1,0 +1,109 @@
+@import 'mixins';
+@import 'variables';
+
+/*
+ * *************************
+ * BUTTONS
+ * *************************
+*/
+
+.btn-wrapper {
+	margin-bottom: 0px;
+}
+.btn, .btn-outline, .wpcf7-submit, .sf-field-reset input, .sf-field-submit input {
+	background: @white;
+	border: none;
+	.boxShadow(2px, 2px, 4px, rgba(0,0,0,0.20));
+	display: inline-block;
+	padding: 10px 12px 8px 17px;
+	position: relative;
+	text-transform: uppercase;
+	.transition(background, 0.3s, ease);
+
+	&:hover {
+		.bg {
+			.transformScale(1,1);
+		}
+		.txt {
+			color: @white;
+		}
+	}
+
+	.bg {
+		background-color: @green;
+		height: 100%;
+		left: 0px;
+		position: absolute;
+		top: 0px;
+		.transformScale(0,1);
+		.transition(all, .3s, ease);
+		width: 100%;
+		z-index: 1;
+	}
+	.txt {
+		position: relative;
+		z-index: 2;
+
+		.icon {
+			font-size: .9em;
+			padding-left: 3px;
+		}
+	}
+}
+.btn-inline {
+	margin: 3px;
+}
+.btn-outline {
+	border: 1px solid @white;
+}
+
+.btn-green, .btn-darkblue, .btn-blue, .btn-teal {
+	.bg {
+		background-color: @white;
+	}
+	.txt {
+		color: @white;
+	}
+}
+.btn-green {
+	background: @green;
+
+	&:hover {
+		.txt {
+			color: @green;
+		}
+	}
+}
+.btn-darkblue {
+	background: @darkBlue;
+
+	&:hover {
+		.txt {
+			color: @darkBlue;
+		}
+	}
+}
+.btn-blue {
+	background: @blue;
+
+	&:hover {
+		.txt {
+			color: @blue;
+		}
+	}
+}
+.btn-teal {
+	background: @teal;
+
+	&:hover {
+		.txt {
+			color: @teal;
+		}
+	}
+}
+
+/* form submit button */
+.wpcf7-submit {
+	background: @green;
+	color: @white;
+}

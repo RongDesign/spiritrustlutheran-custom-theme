@@ -1,0 +1,110 @@
+@import 'lib/css/normalize';
+@import 'lib/css/variables';
+@import 'lib/css/fonts';
+
+* { box-sizing: border-box; line-height: 1.2em; }
+
+:focus { outline: 0 !important;}
+::selection { background: @teal; color: @white; }
+::-moz-selection { background: @teal; color: @white; }
+
+body {
+	background: @white;
+	color: @gray;
+	font-family: @robotocondensedregular;
+	font-size: 1.0em;
+	line-height: 1.8em;
+	margin: 20px;
+}
+h1, h2, h3, h4, h5, h6 {
+	color: @darkBlue;
+	font-family: 'keplerregular';
+	font-weight: normal;
+	line-height: 1.0em;
+	margin: 0px;
+	padding: 0px;
+}
+h1 {
+	color: #ffffff;
+	font-size: 3.75em;
+}
+h2, .module h1 {
+	font-size: 3.0em;
+	margin-bottom: 10px;
+}
+h3 {
+	color: #666666;
+	font-family: @robotocondensedbold;
+	font-size: 1.625em;
+	margin-bottom: 25px;
+	padding-top: 15px;
+}
+h4 {
+	font-size: 1.5em;
+	margin-bottom: 10px;
+	padding-top: 15px;
+}
+h5 {
+	font-size: 1.12em;
+	margin-bottom: 10px;
+}
+h6 {
+	font-size: 1.0em;
+	margin-bottom: 10px;
+}
+p { margin: 0px 0px 25px 0px; padding: 0px; }
+a { color: @green; text-decoration: none; }
+
+sub, sup {
+	font-size: 50%;
+}
+
+/* ordered lists */
+ol {
+	margin: 0px 0px 25px 0px;
+
+	> li {
+		padding-bottom: 5px;
+		padding-top: 5px;
+
+		ul, ol {
+			padding-top: 8px;
+		}
+		li {
+			padding-bottom: 1px;
+			padding-top: 1px;
+		}
+	}
+}
+
+/* un-ordered lists */
+ul {
+	margin: 0px 0px 25px 0px;
+	padding: 0px;
+
+	> li {
+		list-style-type: none;
+		maring: 0px;
+		padding: 5px 0px 5px 40px;
+		position: relative;
+
+		&:before {
+			color: @green;
+			content: '\f105'; /* angle right icon */
+			.font_icon_attributes();
+			font-size: 20px;
+			left: 22px;
+			position: absolute;
+			top: 5px;
+		}
+
+		ul, ol {
+			margin-bottom: 5px;
+			padding-top: 8px;
+		}
+		li {
+			padding-bottom: 1px;
+			padding-top: 1px;
+		}
+	}
+}

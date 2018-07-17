@@ -1,0 +1,144 @@
+/*
+ * *************************
+ * LESS MIXINS
+ * *************************
+*/
+
+.animation(@animation, @duration, @ease) {
+	-webkit-animation: @animation @duration @ease;
+	   -moz-animation: @animation @duration @ease;
+	        animation: @animation @duration @ease;
+}
+.animationIterationCount(@value) {
+	-webkit-animation-iteration-count: @value;
+	   -moz-animation-iteration-count: @value;
+	        animation-iteration-count: @value;
+}
+.backfaceVisibility(@value) {
+	-webkit-backface-visibility: @value;
+	        backface-visibility: @value;
+}
+.backgroundImage(@value1, @value2) {
+	background-image: -webkit-gradient(linear, left top, left bottom, color-stop(.3, @value2), color-stop(1, @value1));
+	background-image: -webkit-linear-gradient(top, @value2 30%, @value1 100%);
+	background-image:    -moz-linear-gradient(top, @value2 30%, @value1 100%);
+	background-image:     -ms-linear-gradient(top, @value2 30%, @value1 100%);
+	background-image:      -o-linear-gradient(top, @value2 30%, @value1 100%);
+	background-image:         linear-gradient(to bottom, @value2 30%, @value1 100%);
+}
+.borderRadius(@value) {
+	-webkit-border-radius: @value;
+	   -moz-border-radius: @value;
+	        border-radius: @value;
+}
+.borderRadiusTopLeft(@value) {
+	-webkit-border-top-left-radius: @value;
+	   -moz-border-top-left-radius: @value;
+	        border-top-left-radius: @value;
+}
+.borderRadiusTopRight(@value) {
+	-webkit-border-top-right-radius: @value;
+	   -moz-border-top-right-radius: @value;
+	        border-top-right-radius: @value;
+}
+.borderRadiusBottomLeft(@value) {
+	-webkit-border-bottom-left-radius: @value;
+	   -moz-border-bottom-left-radius: @value;
+	        border-bottom-left-radius: @value;
+}
+.borderRadiusBottomRight(@value) {
+	-webkit-border-bottom-right-radius: @value;
+	   -moz-border-bottom-right-radius: @value;
+	        border-bottom-right-radius: @value;
+}
+.boxShadow(@x, @y, @blur, @color) {
+	-webkit-box-shadow: @x @y @blur @color;
+	   -moz-box-shadow: @x @y @blur @color;
+	        box-shadow: @x @y @blur @color;
+}
+.boxShadowReset(@value) {
+	-webkit-box-shadow: @value;
+	   -moz-box-shadow: @value;
+	        box-shadow: @value;
+}
+.clearTransition(@property) {
+	-webkit-transition: @property;
+	   -moz-transition: @property;
+	     -o-transition: @property;
+	        transition: @property;
+}
+.opacity(@value, @ieValue) {
+	opacity: @value;
+	-ms-filter: ~"progid:DXImageTransform.Microsoft.Alpha(Opacity=@{ieValue})"; /* IE8, must be before filter property below for IE8-as-IE7 to work */
+	    filter: alpha(opacity=@ieValue); /* IE5-7 */
+}
+.placeholder(@rules) {
+	&::-webkit-input-placeholder {
+		@rules();
+	}
+	&:-moz-placeholder {
+		@rules();
+	}
+	&::-moz-placeholder {
+		@rules();
+	}
+	&:-ms-input-placeholder {
+		@rules();
+	}
+}
+.transformRotate(@deg) {
+	-webkit-transform: rotate(@deg);
+	   -moz-transform: rotate(@deg);
+	    -ms-transform: rotate(@deg);
+	     -o-transform: rotate(@deg);
+	        transform: rotate(@deg);
+}
+.transformRotateTranslate(@deg, @x, @y) {
+	-webkit-transform: rotate(@deg) translate(@x, @y);
+	   -moz-transform: rotate(@deg) translate(@x, @y);
+	    -ms-transform: rotate(@deg) translate(@x, @y);
+	     -o-transform: rotate(@deg) translate(@x, @y);
+	        transform: rotate(@deg) translate(@x, @y);
+	        transform: rotate(@deg) translate(@x, @y);
+}
+.transformScale(@x, @y) {
+	-webkit-transform: scale(@x, @y);
+	    -ms-transform: scale(@x, @y);
+	        transform: scale(@x, @y);
+}
+.transformSkew(@deg) {
+-webkit-transform: skewX(@deg);
+   -moz-transform: skewX(@deg);
+    -ms-transform: skewX(@deg);
+        transform: skewX(@deg);
+}
+.transformTranslate(@x, @y) {
+	-webkit-transform: translate(@x, @y);
+	   -moz-transform: translate(@x, @y);
+	    -ms-transform: translate(@x, @y);
+	     -o-transform: translate(@x, @y);
+	        transform: translate(@x, @y);
+}
+.transformTranslateZ(@x) {
+	-webkit-transform: translate(@x);
+	   -moz-transform: translate(@x);
+	    -ms-transform: translate(@x);
+	     -o-transform: translate(@x);
+	        transform: translate(@x);
+}
+.transition(@property, @duration, @function) {
+	-webkit-transition: @property @duration @function;
+	   -moz-transition: @property @duration @function;
+	     -o-transition: @property @duration @function;
+	        transition: @property @duration @function;
+}
+.transition2(@property1, @duration1, @function1, @property2, @duration2, @function2) {
+	-webkit-transition: @property1 @duration1 @function1, @property2 @duration2 @function2;
+	   -moz-transition: @property1 @duration1 @function1, @property2 @duration2 @function2;
+	     -o-transition: @property1 @duration1 @function1, @property2 @duration2 @function2;
+	        transition: @property1 @duration1 @function1, @property2 @duration2 @function2;
+}
+.transitionDuration(@duration) {
+	-webkit-transition-duration: @duration;
+	        transition-duration: @duration;
+}

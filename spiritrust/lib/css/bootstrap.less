@@ -1,0 +1,62 @@
+@import 'variables';
+@import 'mixins';
+
+/*
+ * *************************
+ * COMMON
+ * *************************
+*/
+
+/* floats */
+.left {
+	float: left;
+}
+.right {
+	float: right;
+}
+
+/* display */
+.show {
+	display: block;
+}
+.hide {
+	display: none;
+}
+
+/*clear basic list formatting attributes */
+.clist {
+	list-style-type: none;
+	margin: 0px;
+	padding: 0px;
+}
+
+/* image replace */
+.ir {
+	display: block;
+	overflow: hidden;
+	text-indent: -9999px;
+}
+
+/* hide overflow */
+.hide-overflow {
+	overflow: hidden;
+}
+
+/* clearfix */
+.cf:before, .cf:after, .clearfix:before, .clearfix:after {
+	content: '';
+	display: table;
+}
+.cf:after, .clearfix:after {
+	clear: both;
+}
+
+/* form focus */
+input[type=text], textarea {
+	.transition(all, .3s, ease);
+}
+
+input[type=text]:focus, textarea:focus {
+	border-color: @blue;
+	.boxShadow(0px, 0px, 5px, @blue);
+}
